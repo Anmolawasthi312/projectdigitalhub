@@ -1,0 +1,960 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intitial-scale=1.0">
+    <title>DigitalHub</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'static/css/home.css' %}">
+ 
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--box icons--->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+:root{
+  
+    --background: #1e1e1e;
+    --background-border: #6b626c;
+    --hover-color:#12f7ff;
+    --bg-color:#081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+    --big-font:2.5rem;
+    --normal-font:2rem;
+    --neon-box-shadow:0 0 .5rem var(--main-color);
+    --font-neon-text-shadow:0 0 10px rgba (18,247,255,0.3),
+    0 0 20px rgba(18,247,255,0.3),
+    0 0 30px rgba(18,247,255,0.3),
+    0 0 40px rgba(18,247,255,0.3),
+    0 0 70px rgba(18,247,255,0.3),
+    0 0 80px rgba(18,247,255,0.3),
+    0 0 100px rgba(18,247,255,0.3),
+    0 0 150px rgba(18,247,255,0.3),
+}
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  body{
+    font-family: "poppins",sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+    transition: .3s; 
+  }
+  .header.sticky{
+    background:var(--bg-color);
+  }
+  .logo{
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+  }
+  .navbar{
+    position: relative;
+  }
+  .navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem; 
+    transition: .3s;
+  }
+
+.navbar a:hover,
+.navbar a.active{
+    color:var(--main-color);
+
+  }
+  #menu-icon{
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+  }
+  section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+  }
+ 
+
+  .home{
+    display: flex;
+    align-items: center;
+    padding: 0% 10%;
+  
+   background-size: 30%;
+   background-position: right;
+   margin-right: 10%;   
+ }
+ 
+
+
+ .btn-box{
+   
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   width: 34.5rem;
+   height: 5rem ;
+ }
+ .btn-box .btn{
+   position: relative;
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: .2rem solid var(--main-color);
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.btn-box .btn:hover{
+ color: var(--main-color);
+}
+
+
+
+.btn-box .btn.btn::nth-child(2){
+ background: transparent;
+ color: var(--main-color);
+
+}
+
+.btn-box .btn.btn::nth-child(2):hover{
+ color: var(--bg-color);
+}
+
+
+
+.btn-box .btn.btn::nth-child(2)::before{
+
+ background: var(--main-color);
+}
+
+
+
+.btn-box .btn::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background:var(--bg-color);
+   z-index: -1;
+   transition: .5s;
+   
+}
+.btn-box .btn:hover::before{
+ width: 100%;
+}
+
+
+
+.container{
+ max-width: 1180px;
+ margin-inline: auto;
+ padding-inline: var(--padding-inline-section);
+ overflow: hidden;
+}
+.flex{
+ display: flex;
+ align-items: center;
+
+}
+
+header{
+ padding: 50px var(--padding-inline-section);
+}
+.header-section{
+ justify-content: center;
+ gap: 50px;
+}
+.header-left{
+ max-width: 40vw;
+}
+.header-left h1{
+ margin-top: 20px;
+}
+.header-right img{
+ width: 100%;
+
+}
+
+
+@media  screen and (max-width: 992px) {
+ .nav-toggle{
+    display: block;
+     margin-right: 20px;
+     size: 50px;
+ }
+ .nav-links{
+     position: absolute;
+     background-color: var(--res-color);
+     left: -100%;
+     top: 100%;
+     width: 100%;
+     padding-block: 20px;
+ }
+
+ .nav-links ul{
+     flex-direction: column;
+ }
+ .main-nav{
+     overflow: initial;
+ }
+ .nav-links.active{
+     left: 0;
+ }
+ .Firstcontent{
+     text-align: justify;
+     margin-top: 5px;
+     margin-bottom: 5px;
+ }
+ 
+ 
+}
+@media screen and  (max-width: 767px) {
+ .primary-button{
+     width: 100%;
+ }
+ .header-section{
+     flex-direction: column-reverse;
+ }
+ .header-left{
+     max-width: 100vw;
+     text-align: center;
+ }
+ .features-card{
+     min-width: calc(50% - 10px);
+
+ }
+ 
+}
+@media screen and (max-width: 479px) {
+ :root{
+     --padding-inline-section: 10px;
+ }
+ h1{
+     font-size: 2rem;
+ }
+ h2{
+     font-size: 1.5rem;
+ }
+ h3{
+     font-size: 1.5rem;
+ }
+ p{
+     font-size: 1rem;
+ }
+ .features-card{
+     min-width: calc(50% - 10px);
+
+ }
+
+}
+@media screen and (max-width: 400px) {
+ :root{
+     --padding-inline-section: 8px;
+ }
+ h1{
+     font-size: 1.5rem;
+ }
+ h2{
+     font-size: 1rem;
+ }
+ h3{
+     font-size: 1rem;
+ }
+ p{
+     font-size: .8rem;
+ }
+ .features-card{
+     min-width: 100%;
+
+ }
+
+}
+
+
+ /*-------------------     About    ----------- */
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--second-bg-color);
+  padding-bottom: 6rem;
+}
+.heading{
+    position: relative;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+span{
+  color: var(--main-color);
+}
+.about-img{
+  position: relative;
+  width :25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img img{
+  width: 90%;
+  border-radius: 50%;
+  border: .2rem solid var(--main-color);
+}
+.about-img .circle-spin{
+  position: absolute;
+ top: 50%;
+ left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: .5rem solid var(--hover-color);
+  border-bottom: .5rem solid var(--hover-color);
+  border-left: .5rem solid var(--);
+  border-right: .5rem solid var(--);
+  animation: aboutSpinner 8s linear infinite;
+}
+.about-content{
+  text-align: center;
+}
+.about-content h3{
+  font-size: 2.5rem;
+}
+.about-content p{
+  font-family:Arial, sans-serif;
+  font-size:2em;
+  margin : 2rem 0 3rem;
+
+}
+.btn-box .btns{
+
+  display: inline-block;
+  width: 15rem;
+  
+}
+.btn-box .btns a::before{
+  justify-content: center;
+  background: var(--second-bg-color);
+  position: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+.about-me {
+    background-color: var(--second-bg-color);
+    padding: 6rem 0;
+  }
+  
+  .about-me .about-heading {
+    color: var(--hover-color);
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .about-content img {
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .about-content p {
+    font-size: var(--normal-font);
+    color: #f0f0e6;
+    padding: 0 2.3rem;
+    text-align: center;
+  }
+  
+  .skills .skills-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #0fd0e9;
+    text-align: center;
+  }
+  
+  .about-me .about-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .about-content .left-content {
+    flex-basis: 50%;
+    text-align: center;
+  }
+  
+  .about-content .right-content {
+    flex-basis: 50%;
+  }
+  
+  
+  
+  @keyframes animate {
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+  
+  .navbar.solid {
+    background-color: #07374a;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px rgb(7 55 74 / 20%);
+    z-index: 500;
+  }
+  
+  .navbar.solid .navbar-brand {
+    display: inline-block;
+    color: #f0f0e6;
+    transition: color 1s ease 0s;
+  }
+  
+  .navbar-brand {
+    display: none;
+    color: #2f2f28;
+    font-weight: 400;
+  }
+  /*-------------------    services   ----------- */
+
+.services{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  background-color: black;
+  padding-bottom: 6rem;
+  grid-auto-rows: 20rem;
+}
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1500px; /* Set the perspective for the 3D effect */
+  }
+  
+  /* Style the gallery items */
+  .gallery-item {
+    margin: 36px;
+    position: relative;
+    transform-style: preserve-3d; /* Preserve the 3D transform of the child elements */
+  }
+  
+  /* Style the gallery images */
+  .gallery-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out; /* Add a smooth transition to the image rotation */
+  }
+  
+  /* Rotate the images on hover */
+  .gallery-item:hover img {
+    transform: rotateX(10deg) rotateY(10deg); /* Rotate the image on both X and Y axes */
+  }
+  
+  /* Responsive adaptations */
+  @media (max-width: 768px) {
+    .gallery-item img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-item img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  /* ------------contact info ------*/
+  .contact {
+    background: #198ac2 linear-gradient(180deg,#111111 12%,#00abf0 30%,#141414 100%);
+  color: #fff;
+    width:100%
+  }
+  .contact form{
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+  }
+ 
+  .contact form input,
+  .contact form textarea{
+    width: 100%;
+    color:var(--text-color) ;
+    background: var(--bg-color);
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+ padding: 0.7rem ;
+  }
+
+  .contact form textarea{
+    resize: none;
+  }
+  .formBTn{
+  
+    display: flex;
+    justify-content:center ;
+    width:100% ;
+  }
+
+  /*-------------------     footer    ----------- */
+
+ .footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+
+ }
+ .footer-text p{
+
+ font-size: 1.6rem;
+ }
+
+ .footer-iconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border: .2rem solid var(--main-color) ;
+  border-radius: .6rem;
+  z-index: 1 ;
+  overflow: hidden;
+ }
+ .footer-iconTop a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1 ;
+  transition: .5s;
+ }
+ .footer-iconTop a:hover::before{
+ width: 100%;
+ }
+ .footer-iconTop a i{
+  font-size: 2.4rem;
+  color: var(--bg-color);
+  transition: .5s;
+ }
+ .footer-iconTop a:hover i{
+  color: var(--main-color);
+ }
+ /*---------ANIMATION RELOAD AND SCROLL=---------*/
+ .animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 98;
+ }
+ .animate.home-img{
+  width: 50%;
+ }
+ .logo .animate,
+ .navbar .animate, 
+ #menu-icon .animate,
+ .bx bx-menu.animate,
+ .home.show-animate .animate
+ {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(.3s * var(--i));
+ }
+
+ .animate.scroll {
+  background:  transparent;
+      transition: 1s ease;
+      transition-delay:calc(.3s / var(--i)) ;
+ }
+.about.home.show-animate.animate.scroll{
+  transition-delay:calc(.3s * var(--i)) ;
+  width: 0;
+
+}
+/*---------------------- Breakpoints------------------ */
+
+@media (max-width : 1200px){
+  html{
+    font-size:55% ;
+  }
+}
+
+@media(max-width: 991px){
+  .header{
+    padding: 2rem 4%;
+  }
+  section{
+    padding:10rem 4% 2rem ;
+  } 
+  .home
+{
+  padding: 0 4%;
+}
+.footer{
+  padding: 2rem 4.5%;
+}
+
+}
+
+
+@media(max-width: 768px){
+  .header{
+    background: var(--bg-color);
+  }
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 1rem 4%;
+    background:var(--bg-color);
+    box-shadow: 0 .5rem 1rem rgba(15, 15, 15, 0.2);
+    z-index: 1;
+    transition: .25s ease;
+    transition-delay:.25s ;
+  } 
+
+  .navbar.active{
+    left: 0;
+    transition-delay:0s ;
+  }
+  .navbar .active-nav{
+    position: absolute;
+    top: 0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    background:var(--bg-color);
+    border-top: .1rem solid rgba(0, 0,0, .2);
+    z-index: -1;
+    transition: .25s ease;
+    transition-delay: 0s;
+
+  }
+
+  .navbar.active .active-nav{
+    left: 0;
+    transition-delay: .25s;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    transform: translateX(-20rem);
+    transition: .25s ease;
+    transition-delay: 0s;
+  }
+  .navbar.active a {
+    transform: translateX(0);
+    transition-delay: .25s;
+  }
+  .home-imgHover{
+    pointer-events:none ;
+    background: var(--bg-color);
+    opacity: .6;
+  }
+}
+
+@media(max-width: 520px){
+  html{
+    font-size: 50%;
+  }
+  .home-content h1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-sci{
+    width: 160px; 
+  }
+
+  .home-sci a {
+    width: 38px;
+    height: 38px; 
+  }
+}
+
+@media(max-width: 462px){
+  .home-content h1{
+    font-size: 5.2rem;
+  }
+  .services{
+    padding:10rem 4% 5rem 5%;
+  }
+  .contact form .input-box .input-field{
+    width:100% ;
+  }
+  .footer{
+    flex-direction: column-reverse;
+  }
+  .footer p{
+    margin-top: 2rem ;
+    text-align: center;
+  }
+}
+@media(max-width: 371px){
+  .home{
+    justify-content: center;
+  }
+  .home-content{
+    display: flex;
+    align-items:center ;
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+}
+
+/*--------------------------------KEYFRAME ANIMATION-----------*/
+@keyframes homeBgText{
+  0%,
+  10%,
+  100% {
+    background-position: -33rem 0;
+  }
+    65%,
+    85% {
+    background-position: 0 0;
+  }
+}
+@keyframes homeCursorText{
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+    65%,
+    78%,
+    85% {
+   width: 100%;
+   opacity: 1;
+  }
+  75%,
+  81%{
+    opacity: 0;
+  }
+}
+
+@keyframes aboutSpinner{
+  100%{
+    transform: translate(-50% ,-50%) rotate(360deg);
+  }
+}
+@keyframes showRight {
+  100%{
+     width: 0;
+  }
+}
+    </style>
+   
+</head>
+
+<body>
+    <!---header design-->
+    <header class="header">
+       <div class="logo">
+        <img src="{% static 'img/mainlogo.png' %}" alt="logo" width="40%" height="10%">
+        
+       </div>
+        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:1;"></span> </div>
+        <nav class="navbar">
+            <a href="{% url 'homepage' %}" class="active" >Home</a>
+            <a href="#about">About</a>
+          
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="{% url 'logout' %}">logout</a>
+            <span class="animate" style="--i:1;"></span>
+
+          <span class="active-nav"></span>
+         
+        </nav>
+
+    </header>
+
+    <!-- home section design-->
+    <section class="home" id="home">
+
+        <header>
+            <div class="container header-section flex">
+                <div class="header-left">
+                  <h2 > Welcome to <span>Digital Hub</span>, a digital haven where you'll discover a vast collection of free applications designed to enhance your productivity, creativity, and overall computing experience. We believe that technology should be accessible to everyone, regardless of financial constraints. That's why we're dedicated to providing a diverse range of applications that are not only free to use but also packed with powerful features and user-friendly interfaces.</h2>
+                  
+                </div>
+                <div class="header-right">
+                    <img src="{% static 'img/mimg.jpeg' %}" alt="img">
+                </div>
+    
+            </div>
+        </header>
+        </section>
+    <!--about section design -->
+    <section class="about" id="about">
+
+        <h2 class="heading">About <span> Me</span></h2>
+        <div class="about-img">
+            <img src="{% static 'img/ch.webp' %}">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+          
+            <p>
+                
+
+
+Welcome to <span>Digital Hub</span>, a digital haven where you'll discover a vast collection of free applications designed to enhance your productivity, creativity, and overall computing experience. We believe that technology should be accessible to everyone, regardless of financial constraints. That's why we're dedicated to providing a diverse range of applications that are not only free to use but also packed with powerful features and user-friendly interfaces.
+            </p>
+
+
+            <div class="btn-box btns">
+                <a href="#" class="btn"> Read More</a>
+            </div>
+        </div>
+
+    </section>
+    
+      <!--services section design-->
+
+  <section class="services" id="services">
+    <h2 class="heading">OUR <span> SERVICES</span></h2> 
+    <div class="gallery">
+
+      <div class="gallery-item">
+        
+          <a href="{% url 'android' %}" ><img src="{% static 'img/android-removebg-preview.png' %}" alt="Image 1">
+      </div>
+  
+      
+  
+      <div class="gallery-item">
+          <a href="{% url 'apple' %}" ><img src="{% static 'img/mac-removebg-preview.png' %}" alt="Image 3"></a>
+      </div>
+  
+      <div class="gallery-item">
+        <a href="{% url 'window' %}" ><img src="{% static 'img/window.png' %}" alt="Image 4">
+      </div>
+        
+        <!-- Pictures from Unsplash -->
+      </div>
+    
+    </div>
+  </section>
+</div>
+  <!--contact section design-->
+<section class="contact" id="contact">
+   <h2 class="heading">Contact<span> Me!</span></h2> 
+   <div class="focus">   <form action="">
+    
+
+<input type="text" placeholder="Your Name">
+<input type="text" placeholder="Phone Number">
+<input type="text" placeholder="Email">
+<input type="text" placeholder="Email Subject">
+<textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+<div class="btn-box formBTn">
+    <button type="submit" class="btn"> Send</button>
+</div>
+</form>
+   
+</section>
+ 
+
+<!-- footer design-->
+<footer class="footer">
+  <div class="footer-text">
+ <center>  <p> Copyright &copy; 2023 by Anmol | All Right Reserved  </p> 
+  <p> for more info mail - logicalhpmaker@gmail.com<p>
+</center>
+  </div>
+
+ 
+  
+</footer>
+<script src="{% static 'js/homepage.js' %}"></script>
+
+  
+   
+</section>
+</body>
+
+</html>

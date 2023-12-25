@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+
+      <title>App Store</title>
+
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/androidstyle.css' %}">
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+      <style>
+         body{
+            background-image: linear-gradient(to bottom, cyan 0%, white 30%, white 60%, #00abf0 100%);
+         }
+         .tasty_text  {
+            color: black;
+         }
+         .header-section {
+            background-color: blue;
+         }
+      </style>
+   </head>
+   <body>
+      
+      <div class="header_section">
+         <div class="container-fluid">
+         </div>
+
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="banner_img"><img src="{% static 'img/dhapps.png' %}"></div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="banner_taital_main">
+                                 <h1 class="banner_taital">
+                                 <h5 class="tasty_text">Download millions of apps for free!</h5>
+                                 <p class="banner_text"><b>The most trusted and secure place to get apps and games for your device</b></p>
+                                 <div class="btn_main">
+                                    <div class="about_bt"><a href="#about">About Us</a></div>
+                                    <div class="callnow_bt active"><a href="#apps">Apps</a></div>
+                                    <div class="main_bt"><a href="{% url 'homepage' %}">MAIN PAGE</a></div>
+                                    
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="apps_section layout_padding" id="apps">
+         <div class="container">
+            <div class="row">
+               <h1 class="apps_header">Top Apps on Store</h1>
+            </div>
+         </div>
+         <div class="apps_section_2">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/Insta.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Instagram</h3>
+                              <div class="read_bt"><a target="_blank" href="https://teraboxapp.com/s/1d3H0-lIfOu3VS-fqQAdqVA">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/fb.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Facebook</h3>
+                              <div class="read_bt"><a target="_blank" href="https://teraboxapp.com/s/1PX3wbMB3UMzF4Lb3CIPUeA">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/whatsapp.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Whatsapp</h3>
+                              <div class="read_bt"><a target="_blank" href="https://teraboxapp.com/s/17v4Ekz3urjzdueeUNEmdvw">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/snap.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Snapchat</h3>
+                              <div class="read_bt"><a target="_blank" href="https://teraboxapp.com/s/1S6GyueDJjdn6Xn0qBX7gDg">Download</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/music.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Amazon Music</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.amazon.mp3">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/phonepe.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Instagram</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.phonepe.app">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/vr.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Voice Recorder</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.coffeebeanventures.easyvoicerecorder">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/duo.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Duolingo</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.duolingo">Download</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/gpay.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Google Pay</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.google.android.apps.nbu.paisa.user">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/edge.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Microsoft Edge</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.microsoft.emmx">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/word.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">Word</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.microsoft.office.word">Download</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="apps_img"><img src="{% static 'img/fm.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                              <h3 class="types_text">File Manager</h3>
+                              <div class="read_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer">Download</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- coffee section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="about_taital">The App Store</h1>
+
+               </div>
+            </div>
+            <div class="about_section_2 layout_padding" id="about">
+               <div class="image_iman"><img src="{% static 'img/allapps.png' %}" class="about_img"></div>
+               <div class="about_taital_box">
+                  <h1 class="about_taital_1">Thanks for choosing us!</h1>
+                  <p class=" about_text"><b>Welcome to our cutting-edge App Store, your go-to destination for seamless app discovery and downloads! Embrace the future of digital convenience with confidence, knowing that our App Store prioritizes your privacy and data integrity. Discover, download, and enjoy a seamless app experience - your gateway to a world of innovation awaits!</b></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- application section start -->
+      <div class="application_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="about_taital">Trending Applications</h1>
+               </div>
+            </div>
+            <div class="application_section_2">
+               <div class="application_taital_main">
+                  <div class="application_left">
+                     <div class="apps_img"><img src="{% static 'img/fm.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                  </div>
+                  <div class="application_right">
+                     <h3 class="moark_text">File Manager</h3>
+                     <p class="application_text"> <b>Mi File Manager is a free, secure tool that helps you find file faster, manage files easily, and share them offline with others. It supports tons of cool features: quick search, moving, deleting, opening, and sharing files, as well as renaming, unzipping, and copy-paste.</b></p>
+                  </div>
+               </div>
+               <div class="about_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer">Download</a></div>
+               <div class="application_taital_main">
+                  <div class="application_left">
+                     <div class="apps_img"><img src="{% static 'img/duo.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                  </div>
+                  <div class="application_right">
+                     <h3 class="moark_text">Duolingo</h3>
+                     <p class="application_text"><b>Learn a new language with the world's most-downloaded education app! Duolingo is the fun, free app for learning 40+ languages through quick, bite-sized lessons. Practice speaking, reading, listening, and writing to build your vocabulary and grammar skills.</b></p>
+                  </div>
+               </div>
+                <div class="about_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.duolingo">Download</a></div>
+               <div class="application_taital_main">
+                  <div class="application_left"> 
+                     <div class="apps_img"><img src="{% static 'img/music.webp' %}" style="height:100px; border-radius: 30px;"></div>
+                  </div>
+                  <div class="application_right">
+                     <h3 class="moark_text">Amazon Music</h3>
+                     <p class="application_text"><b>We're changing the way you discover and play the music you love. Listen free to music and podcasts with ads-no credit card required. Prime members can enjoy all the music + top podcasts ad-free. Or, get unlimited access with Amazon Music Unlimited and play any song, anytime, anywhere.</b> </p>
+                  </div>
+               </div>
+               <div class="about_bt"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.amazon.mp3">Download</a></div>
+            </div>
+         </div>
+      </div>
+      <!-- application section end -->
+
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+   </body>
+</html>
